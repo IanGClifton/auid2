@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.auidbook.woodworkingtools" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ToolGridActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".toollist.ToolListActivity"
+            android:label="@string/title_activity_tool_list"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ToolGridActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.auidbook.woodworkingtools.ToolGridActivity" />
+        </activity>
+        <activity
+            android:name=".tooldetails.ToolDetailActivity"
+            android:label="@string/title_activity_tool_detail"
+            android:launchMode="singleTop"
+            android:parentActivityName=".toollist.ToolListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.auidbook.woodworkingtools.toollist.ToolListActivity" />
+        </activity>
+    </application>
+
+</manifest>

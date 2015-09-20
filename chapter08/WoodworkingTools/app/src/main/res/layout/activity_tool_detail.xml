@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp">
+
+            <com.auidbook.woodworkingtools.CaptionedImageView
+                android:id="@+id/hero_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/detail_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/detail_2"
+                android:layout_alignStart="@+id/hero_image"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textSize="20sp"
+                tools:text="3/4 HP"/>
+
+            <TextView
+                android:id="@+id/detail_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/detail_0"
+                android:layout_below="@id/detail_0"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textSize="20sp"
+                tools:text="5&quot; travel"/>
+
+            <TextView
+                android:id="@+id/detail_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/price"
+                android:layout_below="@+id/price"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textSize="20sp"
+                tools:text="8&quot; throat"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/detail_1"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:text="The latest and greatest drill press from Acme Inc. A powerful 3/4 HP motor ensures you can drill through dense materials without breaking a sweat. Tail pork belly pancetta shank. Salami ham biltong ball tip pig corned beef jerky turkey meatloaf shank hamburger flank filet mignon porchetta rump. Beef ribs kevin drumstick landjaeger pastrami tail jowl ground round porchetta chuck swine sausage doner jerky. Doner landjaeger bresaola spare ribs short loin tenderloin pancetta fatback kielbasa capicola prosciutto. Beef tenderloin tail sirloin rump tongue short ribs picanha pork chop, landjaeger porchetta. Filet mignon shank shoulder bacon sausage frankfurter."/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/hero_image"
+                android:layout_below="@+id/hero_image"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textSize="20sp"
+                tools:text="$750"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="0dp"
+        android:background="@android:color/transparent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_buy"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/default_padding" />
+</FrameLayout>

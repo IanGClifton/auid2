@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="title">20sp</dimen>
+
+    <dimen name="thumbnail_size">72dp</dimen>
+</resources>
