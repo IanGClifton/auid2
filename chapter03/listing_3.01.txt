@@ -1,0 +1,5 @@
+final int childCount = myViewGroup.getChildCount();
+for (int i = 0; i < childCount; i++) {
+    View v = myViewGroup.getChildAt(i);
+    // Do something with the View
+}

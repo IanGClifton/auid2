@@ -1,0 +1,4 @@
+getSupportFragmentManager().beginTransaction()
+        .add(R.id.container, new ExampleFragment())
+        .addToBackStack(null)
+        .commit();

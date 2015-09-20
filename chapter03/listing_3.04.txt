@@ -1,0 +1,101 @@
+/**
+ * DialogFragment with a simple cancel/confirm dialog and message.
+ *
+ * Activities using this dialog must implement OnDialogChoiceListener.
+ */
+public class SampleDialogFragment extends DialogFragment {
+
+    /**
+     * Interface for receiving dialog events
+     */
+    public interface OnDialogChoiceListener {
+        /**
+         * Triggered when the user presses the cancel button
+         */
+        public void onDialogCanceled();
+
+        /**
+         * Triggered when the user presses the confirm button
+         */
+        public void onDialogConfirmed();
+    }
+
+    private static final String ARG_CONTENT_RESOURCE_ID = "contentResourceId";
+    private static final String ARG_CONFIRM_RESOURCE_ID = "confirmResourceId";
+
+    private int mContentResourceId;
+    private int mConfirmResourceId;
+
+    private OnDialogChoiceListener mListener;
+
+    /**
+     * Creates a new instance of the fragment and sets the arguments
+     *
+     * @param contentResourceId int to use for the content such as R.string.dialog_text
+     * @param confirmResourceId int to use for the confirm button such as R.string.confirm
+     * @return new SampleDialogFragment instance
+     */
+    public static SampleDialogFragment newInstance(int contentResourceId, int confirmResourceId) {
+        SampleDialogFragment fragment = new SampleDialogFragment();
+        Bundle args = new Bundle();
+        args.putInt(ARG_CONTENT_RESOURCE_ID, contentResourceId);
+        args.putInt(ARG_CONFIRM_RESOURCE_ID, confirmResourceId);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    public SampleDialogFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        final Bundle args = getArguments();
+        if (args == null) {
+            throw new IllegalStateException("No arguments set, use the"
+                    + " newInstance method to construct this fragment");
+        }
+        mContentResourceId = args.getInt(ARG_CONTENT_RESOURCE_ID);
+        mConfirmResourceId = args.getInt(ARG_CONFIRM_RESOURCE_ID);
+    }
+
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage(mContentResourceId)
+            .setPositiveButton(mConfirmResourceId, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // Send the positive button event back to the host activity
+                    mListener.onDialogConfirmed();
+                }
+            })
+            .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // Send the negative button event back to the host activity
+                    mListener.onDialogCanceled();
+                }
+            }
+        );
+        return builder.create();
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            mListener = (OnDialogChoiceListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+}

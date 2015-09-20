@@ -1,0 +1,39 @@
+public class TextViewFragment extends Fragment {
+
+    /**
+     * String to use as the key for the "text" argument
+     */
+    private static final String KEY_TEXT = "text";
+
+    /**
+     * Constructs a new TextViewFragment with the specified String
+     *
+     * @param text String to associated with this TextViewFragment
+     * @return TextViewFragment with set arguments
+     */
+    public static TextViewFragment newInstance(String text) {
+        TextViewFragment f = new TextViewFragment();
+
+        Bundle args = new Bundle();
+        args.putString(KEY_TEXT, text);
+        f.setArguments(args);
+
+        return f;
+    }
+
+    /**
+     * Returns the String set in {@link #newInstance(String)}
+     *
+     * @return the String set in {@link #newInstance(String)}
+     */
+    public String getText() {
+        return getArguments().getString(KEY_TEXT);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        TextView tv = new TextView(getActivity());
+        tv.setText(getText());
+        return tv;
+    }
+}
