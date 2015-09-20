@@ -25,3 +25,15 @@ proguard/
 
 # Log Files
 *.log
+
+# Intellij
+.idea/tasks.xml
+.idea/workspace.xml
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/libraries
+
+# Vim
+*.swp

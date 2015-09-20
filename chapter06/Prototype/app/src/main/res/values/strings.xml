@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Woodworking Tools</string>
+
+    <!-- Tool names -->
+    <string name="clamps">Clamps</string>
+    <string name="saws">Saws</string>
+    <string name="drills">Drills</string>
+    <string name="sanders">Sanders</string>
+    <string name="routers">Routers</string>
+    <string name="more">More</string>
+    <string name="about">About</string>
+    <string name="stationary">Stationary</string>
+    <string name="handheld">Handheld</string>
+    <string name="battery">Battery</string>
+
+    <!-- Tool descriptions -->
+    <string name="clamps_description">Whenever you need to keep two work pieces together, clamps are a great solution. A variety of different types of clamps allow you to apply the correct pressure in the right direction for any project need.</string>
+    <string name="saws_description">An essential part of any woodworker\'s tool chest, saws let you easily and quickly shape wood for whatever you may be working on. Different saw specialize in ripping, crosscutting, or even miter cuts.</string>
+    <string name="drills_description">When you need more staying power than a hammer and nail can provide, drills and screws are your best bet. Drills can also create holes for inserting dowels and other pieces.</string>
+    <string name="sanders_description">Before finishing your woodworking project, you will want to sand it smooth. This lets the wood take on the finish more evenly and also improves both its appearance and its feel.</string>
+    <string name="routers_description">A router is one of those tools that you don\'t think you need until after you\'ve used it; then you wonder how you lived without one! Routers can perform aesthetic functions like shaping decorative trim, but they can also provide functions core to woodworking like ensuring two pieces are perfectly flush.</string>
+    <string name="more_description">There are countless tools because there are countless projects. Whatever you might need to do, you can surely find a tool that matches your exact needs.</string>
+    <string name="title_activity_tool_detail">ToolDetailActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>

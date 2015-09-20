@@ -1,0 +1,117 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" android:id="@+id/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@null"
+                android:src="#FFBBBBBB"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/image"
+                android:layout_alignStart="@+id/image"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="26sp"
+                tools:text="Acme 17&quot; drill press"/>
+
+            <TextView
+                android:id="@+id/detail_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/detail_2"
+                android:layout_alignStart="@+id/image"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textColor="@color/black_87"
+                android:textSize="20sp"
+                tools:text="3/4 HP"/>
+
+            <TextView
+                android:id="@+id/detail_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/detail_0"
+                android:layout_below="@id/detail_0"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textColor="@color/black_87"
+                android:textSize="20sp"
+                tools:text="5&quot; travel"/>
+
+            <TextView
+                android:id="@+id/detail_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/price"
+                android:layout_below="@+id/price"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textColor="@color/black_87"
+                android:textSize="20sp"
+                tools:text="8&quot; throat"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/detail_1"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:text="The latest and greatest drill press from Acme Inc. A powerful 3/4 HP motor ensures you can drill through dense materials without breaking a sweat. Tail pork belly pancetta shank. Salami ham biltong ball tip pig corned beef jerky turkey meatloaf shank hamburger flank filet mignon porchetta rump. Beef ribs kevin drumstick landjaeger pastrami tail jowl ground round porchetta chuck swine sausage doner jerky. Doner landjaeger bresaola spare ribs short loin tenderloin pancetta fatback kielbasa capicola prosciutto. Beef tenderloin tail sirloin rump tongue short ribs picanha pork chop, landjaeger porchetta. Filet mignon shank shoulder bacon sausage frankfurter."/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/image"
+                android:layout_below="@+id/image"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textColor="@color/black_87"
+                android:textSize="20sp"
+                tools:text="$750"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/default_padding"
+        android:src="@drawable/ic_buy"/>
+
+</RelativeLayout>

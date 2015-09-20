@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_clamps"
+            android:title="@string/clamps"
+            android:checked="true"
+            />
+        <item
+            android:id="@+id/nav_saws"
+            android:title="@string/saws"
+            />
+        <item
+            android:id="@+id/nav_drills"
+            android:title="@string/drills"
+            />
+        <item
+            android:id="@+id/nav_sanders"
+            android:title="@string/sanders"
+            />
+        <item
+            android:id="@+id/nav_routers"
+            android:title="@string/routers"
+            />
+        <item
+            android:id="@+id/nav_more"
+            android:title="@string/more"
+            />
+    </group>
+</menu>
