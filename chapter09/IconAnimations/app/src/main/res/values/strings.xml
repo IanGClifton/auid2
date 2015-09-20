@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IconAnimations</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="svg_align_left">M30 30h-24v4h24v-4zm0-16h-24v4h24v-4zm-24 12h36v-4h-36v4zm0 16h36v-4h-36v4zm0-36v4h36v-4h-36z</string>
+    <string name="svg_align_justify">M42 30h-36v4h36v-4zm0-16h-36v4h36v-4zm-36 12h36v-4h-36v4zm0 16h36v-4h-36v4zm0-36v4h36v-4h-36z</string>
+
+    <string name="old_svg_align_left">M30 30h-24v4h24v-4zm0-16h-24v4h24v-4zm-24 12h36v-4h-36v4zm0 16h36v-4h-36v4zm0-36v4h36v-4h-36z</string>
+    <string name="old_svg_align_justify">M6 42h36v-4h-36v4zm0-8h36v-4h-36v4zm0-8h36v-4h-36v4zm0-8h36v-4h-36v4zm0-12v4h36v-4h-36z</string>
+</resources>

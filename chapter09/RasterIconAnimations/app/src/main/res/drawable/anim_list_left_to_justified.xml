@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_01"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_02"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_03"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_04"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_05"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_06"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_07"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_08"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_09"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_10"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_left_black_48dp_11"
+          android:duration="17" />
+
+    <item android:drawable="@drawable/ic_format_align_justify_black_48dp"
+          android:duration="17" />
+
+</animation-list>

@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reveal"
+        android:id="@+id/button_reveal"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:background="#F8BBD0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button_reveal"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hide"
+            android:id="@+id/button_hide"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</RelativeLayout>

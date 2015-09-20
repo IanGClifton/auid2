@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SceneTransitions</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="some_text">Some text</string>
+    <string name="change_scene">Change Scene</string>
+    <string name="another_blob">Another blob of text</string>
+</resources>

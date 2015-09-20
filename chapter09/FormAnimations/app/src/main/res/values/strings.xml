@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Form Animations</string>
+    <string name="email_hint">Email address</string>
+    <string name="email_error">example@address.com</string>
+    <string name="password_hint">Password</string>
+    <string name="password_error">Use at least 8 characters</string>
+    <string name="save">Save</string>
+    <string name="success">Success!</string>
+</resources>

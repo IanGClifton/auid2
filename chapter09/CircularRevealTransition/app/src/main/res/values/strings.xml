@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CircularRevealTransition</string>
+    <string name="hide">Hide</string>
+    <string name="reveal">Reveal</string>
+</resources>

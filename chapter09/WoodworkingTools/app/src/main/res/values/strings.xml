@@ -1,0 +1,49 @@
+<resources>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="app_name">Woodworking Tools</string>
+    <string name="title_activity_tool_detail">%s Details</string>
+
+    <!-- Tool names -->
+    <string name="clamps">Clamps</string>
+    <string name="saws">Saws</string>
+    <string name="drills">Drills</string>
+    <string name="sanders">Sanders</string>
+    <string name="routers">Routers</string>
+    <string name="lathes">Lathes</string>
+    <string name="more">More</string>
+    <string name="about">About</string>
+    <string name="stationary">Stationary</string>
+    <string name="handheld">Handheld</string>
+    <string name="battery">Battery</string>
+
+    <!-- Tool descriptions -->
+    <string name="clamps_description">Whenever you need to keep two work pieces together, clamps are a great solution. A variety of different types of clamps allow you to apply the correct pressure in the right direction for any project need.</string>
+    <string name="saws_description">An essential part of any woodworker\'s tool chest, saws let you easily and quickly shape wood for whatever you may be working on. Different saw specialize in ripping, crosscutting, or even miter cuts.</string>
+    <string name="drills_description">When you need more staying power than a hammer and nail can provide, drills and screws are your best bet. Drills can also create holes for inserting dowels and other pieces.</string>
+    <string name="sanders_description">Before finishing your woodworking project, you will want to sand it smooth. This lets the wood take on the finish more evenly and also improves both its appearance and its feel.</string>
+    <string name="routers_description">A router is one of those tools that you don\'t think you need until after you\'ve used it; then you wonder how you lived without one! Routers can perform aesthetic functions like shaping decorative trim, but they can also provide functions core to woodworking like ensuring two pieces are perfectly flush.</string>
+    <string name="lathes_description">Lathes spin a piece of wood known as a blank, allowing you to carve it into a variety of shapes. Lathes are useful for table legs, bowls, and even pens.</string>
+    <string name="more_description">There are countless tools because there are countless projects. Whatever you might need to do, you can surely find a tool that matches your exact needs.</string>
+    <string name="title_activity_tool_grid">ToolGridActivity</string>
+    <string name="title_activity_tool_list">ToolListActivity</string>
+
+    <!-- Tabs -->
+    <string name="parallel_clamps">Parallel</string>
+    <string name="spring_clamps">Spring</string>
+    <string name="pipe_clamps">Pipe</string>
+    <string name="bar_clamps">Bar</string>
+    <string name="toggle_clamps">Toggle</string>
+    <string name="table_saws">Table Saws</string>
+    <string name="jig_saws">Jig Saws</string>
+    <string name="band_saws">Band Saws</string>
+    <string name="circular_saws">Circular Saws</string>
+    <string name="miter_saws">Miter Saws</string>
+    <string name="drill_presses">Drill Presses</string>
+
+    <!-- Transition Names -->
+    <string name="transition_image_view">image_view</string>
+    <string name="transition_text_view">text_view</string>
+</resources>

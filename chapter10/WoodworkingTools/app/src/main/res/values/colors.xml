@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#784330</color>
+    <color name="primary_dark">#4f2218</color>
+    <color name="accent">#00e5ff</color>
+
+    <color name="grid_item_placeholder">@color/primary</color>
+    <color name="grid_item_scrim">#504f2218</color>
+</resources>

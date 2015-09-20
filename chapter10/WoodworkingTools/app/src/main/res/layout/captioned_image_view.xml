@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             >
+
+    <com.iangclifton.woodworkingtools.SquareImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:transitionName="@string/transition_image_view"
+        tools:src="@drawable/hero_image_clamps_1080"/>
+
+    <TextView
+        style="@style/GridItemTitle"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:transitionName="@string/transition_text_view"
+        tools:text="@string/clamps"/>
+</merge>
