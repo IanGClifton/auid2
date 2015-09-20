@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello</string>
+	<string name="intro_paragraph">Welcome to the greatest app in the world!</string>
+</resources>

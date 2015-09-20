@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/example_green_screen" />
+    </item>
+    <item
+        android:left="64dp"
+        android:top="64dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/example_red_screen" />
+    </item>
+
+</layer-list>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:compat="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_share"
+        compat:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+        android:icon="@drawable/ic_action_share"
+        compat:showAsAction="ifRoom"
+        android:title="@string/share"
+        android:orderInCategory="50"/>
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        compat:showAsAction="never"/>
+</menu>

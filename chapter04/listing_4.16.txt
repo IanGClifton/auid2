@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="child_count">
+        <item quantity="one">One child</item>
+        <item quantity="other">%s children</item>
+    </plurals>
+</resources>
