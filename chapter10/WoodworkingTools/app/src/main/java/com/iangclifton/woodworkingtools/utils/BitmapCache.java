@@ -31,7 +31,7 @@ public class BitmapCache extends LruCache<String, Bitmap> {
     private static int getCacheSize() {
         // Maximum KB available to the VM
         final int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
-        // The smaller of a tenth of the total memory or 10MB
+        // The smaller of an eighth of the total memory or 16MB
         final int cacheSize = Math.min(maxMemory / 8, MAXIMUM_SIZE_IN_KB);
         Log.v(TAG, "BitmapCache size: " + cacheSize + "kb");
         return cacheSize;
