@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomAttributesView">
+
+        <!-- boolean -->
+        <attr name="booleanExample" format="boolean" />
+
+        <!-- integer -->
+        <attr name="integerExample" format="integer" />
+
+        <!-- float -->
+        <attr name="floatExample" format="float" />
+
+        <!-- fraction (actually a percentage like "50%") -->
+        <attr name="fractionExample" format="fraction" />
+
+        <!-- string -->
+        <attr name="stringExample" format="string" />
+
+        <!-- color -->
+        <attr name="colorExample" format="color" />
+
+        <!-- dimension -->
+        <attr name="dimensionExample" format="dimension" />
+
+        <!-- reference -->
+        <attr name="referenceExample" format="reference" />
+
+        <!-- enum -->
+        <attr name="enumExample">
+            <enum name="zero_enum" value="0"/>
+            <enum name="one_enum" value="1"/>
+        </attr>
+
+        <!-- flag - the user can use multiple flags -->
+        <attr name="flagExample">
+            <flag name="oneFlag" value="1"/>
+            <flag name="twoFlag" value="2"/>
+            <flag name="fourFlag" value="4"/>
+        </attr>
+
+        <!-- reference OR color -->
+        <attr name="referenceOrColorExample" format="reference|color" />
+
+        <!-- existing attribute -->
+        <attr name="android:textColor" />
+
+    </declare-styleable>
+</resources>

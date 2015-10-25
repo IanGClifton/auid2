@@ -1,0 +1,14 @@
+switch (getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) {
+    case Configuration.SCREENLAYOUT_SIZE_XLARGE:
+        // Extra large (most 100 tablets)
+        break;
+    case Configuration.SCREENLAYOUT_SIZE_LARGE:
+        // Large (most 70 tablets)
+        break;
+    case Configuration.SCREENLAYOUT_SIZE_NORMAL:
+        // Normal (most phones)
+        break;
+    case Configuration.SCREENLAYOUT_SIZE_SMALL:
+        // Small (very uncommon)
+        break;
+}

@@ -1,0 +1,17 @@
+/**
+ * Returns true if the device has a network connection
+ *
+ * @param context Context to access the ConnectivityManager
+ * @return true if the device has a network connection
+ */
+public static boolean isConnectedToNetwork(Context context) {
+    boolean connected = false;
+    ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+    if (cm != null) {
+        NetworkInfo ni = cm.getActiveNetworkInfo();
+        if (ni != null) {
+            connected = ni.isConnected();
+        }
+    }
+    return connected;
+}

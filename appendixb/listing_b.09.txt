@@ -1,0 +1,24 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.iangclifton.auid.appendixc.MyCustomView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#FFFF0000"
+        app:booleanExample="true"
+        app:colorExample="#FFFF0000"
+        app:dimensionExample="100dp"
+        app:enumExample="one_enum"
+        app:flagExample="oneFlag|fourFlag"
+        app:floatExample="5.5"
+        app:fractionExample="10%"
+        app:integerExample="42"
+        app:referenceExample="@string/app_name"
+        app:referenceOrColorExample="#FF00FF00"
+        app:stringExample="My String" />
+</RelativeLayout>

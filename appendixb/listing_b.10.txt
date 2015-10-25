@@ -1,0 +1,163 @@
+public class CustomAttributesView extends View {
+
+    // Enum values
+    private static final int ZERO_ENUM = 0;
+    private static final int ONE_ENUM = 1;
+
+    // Flag values
+    private static final int ONE_FLAG = 1;
+    private static final int TWO_FLAG = 2;
+    private static final int FOUR_FLAG = 4;
+
+    private String mDisplayString;
+    private final Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private StaticLayout mLayout;
+    private TextPaint mTextPaint;
+
+    public CustomAttributesView(Context context) {
+        super(context);
+        mDisplayString = "No custom attributes";
+        mPaint.setColor(Color.BLACK);
+        mTextPaint = new TextPaint(mPaint);
+        mTextPaint.setTextSize(context.getResources().getDimension(R.dimen.customViewTextSize));
+    }
+
+    public CustomAttributesView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context, attrs);
+    }
+
+    public CustomAttributesView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context, attrs);
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public CustomAttributesView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        init(context, attrs);
+    }
+
+    @Override
+    public void onDraw(Canvas canvas) {
+        canvas.save();
+        canvas.clipRect(getPaddingLeft(), getPaddingTop(), getWidth() - getPaddingRight(), getHeight() - getPaddingBottom());
+        canvas.translate(getPaddingLeft(), getPaddingTop());
+        mLayout.draw(canvas);
+        canvas.restore();
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        if (mLayout == null || changed) {
+            mLayout = new StaticLayout(mDisplayString, mTextPaint, right - left, Layout.Alignment.ALIGN_NORMAL, 1, 0, true);
+        }
+    }
+
+    private void init(Context context, AttributeSet attrs) {
+        final TypedArray customAttrs = context.obtainStyledAttributes(attrs, R.styleable.CustomAttributesView);
+        final StringBuilder sb = new StringBuilder();
+        int currentAttribute;
+
+        // boolean
+        currentAttribute = R.styleable.CustomAttributesView_booleanExample;
+        boolean booleanExample = customAttrs.getBoolean(currentAttribute, false);
+        sb.append("Boolean: " ).append(booleanExample).append('\n');
+
+        // integer
+        currentAttribute = R.styleable.CustomAttributesView_integerExample;
+        int integerExample = customAttrs.getInt(currentAttribute, 0);
+        sb.append("Integer: " ).append(integerExample).append('\n');
+
+        // float
+        currentAttribute = R.styleable.CustomAttributesView_floatExample;
+        float floatExample = customAttrs.getFloat(currentAttribute, 0f);
+        sb.append("Float: " ).append(floatExample).append('\n');
+
+        // fraction
+        currentAttribute = R.styleable.CustomAttributesView_fractionExample;
+        float fractionExample = customAttrs.getFraction(currentAttribute, 1, 1, -1);
+        sb.append("Fraction: ").append(fractionExample).append('\n');
+
+        // string
+        currentAttribute = R.styleable.CustomAttributesView_stringExample;
+        String stringExample = customAttrs.getString(currentAttribute);
+        sb.append("String: ").append(stringExample).append('\n');
+
+        // color
+        currentAttribute = R.styleable.CustomAttributesView_colorExample;
+        int colorExample = customAttrs.getColor(currentAttribute, Color.BLACK);
+        sb.append("Color: ")
+          .append(Color.alpha(colorExample))
+          .append("a, ")
+          .append(Color.red(colorExample))
+          .append("r, ")
+          .append(Color.green(colorExample))
+          .append("g, ")
+          .append(Color.blue(colorExample))
+          .append("b ")
+          .append('\n');
+
+        // dimension
+        currentAttribute = R.styleable.CustomAttributesView_dimensionExample;
+        float dimensionExample = customAttrs.getDimension(currentAttribute, 0);
+        sb.append("Dimension: ").append(dimensionExample).append('\n');
+
+        // reference
+        currentAttribute = R.styleable.CustomAttributesView_referenceExample;
+        int referenceExample = customAttrs.getResourceId(currentAttribute, 0);
+        sb.append("Reference: ").append(referenceExample).append('\n');
+
+        // enum
+        currentAttribute = R.styleable.CustomAttributesView_enumExample;
+        int enumExample = customAttrs.getInt(currentAttribute, -1);
+        if (enumExample == ZERO_ENUM) {
+            sb.append("Enum: ZERO_ENUM\n");
+        } else if (enumExample == ONE_ENUM) {
+            sb.append("Enum: ONE_ENUM\n");
+        } else {
+            sb.append("Enum not specified.\n");
+        }
+
+        // flag
+        currentAttribute = R.styleable.CustomAttributesView_flagExample;
+        int flagExample = customAttrs.getInt(currentAttribute, -1);
+        if (flagExample == -1) {
+            sb.append("Flag not specified.\n");
+        } else {
+            if ((flagExample & ONE_FLAG) != 0) {
+                sb.append("Flag contains ONE_FLAG.\n");
+            }
+            if ((flagExample & TWO_FLAG) != 0) {
+                sb.append("Flag contains TWO_FLAG.\n");
+            }
+            if ((flagExample & FOUR_FLAG) != 0) {
+                sb.append("Flag contains FOUR_FLAG.\n");
+            }
+        }
+
+        // reference OR color
+        currentAttribute = R.styleable.CustomAttributesView_referenceOrColorExample;
+        TypedValue tv = customAttrs.peekValue(currentAttribute);
+        if (tv == null) {
+            sb.append("Did not contain reference or color.\n");
+        } else {
+            sb.append("Reference/Color: ").append(tv.coerceToString()).append('\n');
+        }
+
+        // android:textColor
+        currentAttribute = R.styleable.CustomAttributesView_android_textColor;
+        tv = customAttrs.peekValue(currentAttribute);
+        if (tv == null) {
+            mPaint.setColor(Color.BLACK);
+        } else {
+            mPaint.setColor(tv.data);
+        }
+
+        customAttrs.recycle();
+        mDisplayString = sb.toString();
+        mTextPaint = new TextPaint(mPaint);
+        mTextPaint.setTextSize(context.getResources().getDimension(R.dimen.customViewTextSize));
+    }
+}

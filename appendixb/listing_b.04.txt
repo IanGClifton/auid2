@@ -1,0 +1,6 @@
+WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+Display display = wm.getDefaultDisplay();
+Point size = new Point();
+display.getSize(size);
+int screenWidth = size.x;
+int screenHeight = size.y;

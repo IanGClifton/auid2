@@ -1,0 +1,5 @@
+if (Looper.myLooper() == Looper.getMainLooper()) {
+    // UI Thread
+} else {
+    // Other Thread
+}

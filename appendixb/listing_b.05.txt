@@ -1,0 +1,14 @@
+final int density = getResources().getDisplayMetrics().densityDpi;
+if (density > DisplayMetrics.DENSITY_XXXHIGH) {
+    // Display is more than 560 dots per inch
+} else if (density > DisplayMetrics.DENSITY_XXHIGH) {
+    // Display is more than 480 dots per inch
+} else if (density > DisplayMetrics.DENSITY_XHIGH) {
+    // Density is more than 320 dots per inch
+} else if (density > DisplayMetrics.DENSITY_HIGH) {
+    // Density is more than 240 dots per inch
+} else if (density > DisplayMetrics.DENSITY_MEDIUM) {
+    // Density is more than 160 dots per inch
+} else if (density > DisplayMetrics.DENSITY_LOW) {
+    // Density is more than 120 dots per inch
+}
