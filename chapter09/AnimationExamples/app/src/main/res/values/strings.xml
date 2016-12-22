@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Animation Examples</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="interpolator">Interpolator:</string>
+    <string name="duration">Duration (ms)</string>
+    <string name="animate">Animate</string>
+    <string name="reset">Reset</string>
+
+    <string name="text_to_animate_from">This text will animate</string>
+    <string name="text_to_animate_to">Was that amazing?</string>
+</resources>
