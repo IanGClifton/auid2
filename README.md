@@ -27,6 +27,10 @@ Book Table of Contents
 * Appendix A: Google Play Assets
 * Appendix B: Common Task Reference
 
+Issues Compiling
+----------------
+
+If you run into the error "Failed to crunch file" while building one of the projects (such as CircularRevealTransition), it may be due to the path being too long. For additional details, see [Issue 2].
 
 [Amazon]: http://amzn.to/1KsgWE3
-
+[Issue 2]: https://github.com/IanGClifton/auid2/issues/2
